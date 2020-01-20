@@ -1,5 +1,7 @@
 'use strict';
 
+const galerySelector = document.querySelector('#gallery');
+
 const images = [
   {
     url:
@@ -17,9 +19,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const image = document.querySelector('#gallery');
-images.map(pic => {
-  const loadList = document.createElement('li');
-  loadList.insertAdjacentHTML('afterbegin', `<img src="${pic.url}" alt="${pic.alt}">`);
-  image.appendChild(loadList);
+
+images.map(item => {
+  let createImageLi = document.createElement('li');
+  createImageLi.insertAdjacentHTML("afterbegin", `<img src='${item.url}' alt='${item.alt}'>`);
+  galerySelector.appendChild(createImageLi);  
 });
+

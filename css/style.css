@@ -1,15 +1,40 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#categories {
+  padding: 70px;
+}
 #gallery {
-  list-style: none;
-  display: flex;  
+  display: flex;
+  justify-content: space-between;
+  max-width: 650px;
+  padding: 70px;
+
 }
-#gallery li img {
-max-width: 60%;
+ul {
+  list-style-type: none;
 }
-.container {
-  margin: 50px;
+#ingredients {
+  padding: 70px;
 }
+img {
+  max-width: 200px;
+}
+
+#counter {  
+  padding: 70px;
+}
+
+#nameInput {
+  padding: 70px;
+}
+
 #validation-input {
   border: 3px solid #bdbdbd;
+  margin: 70px;
 }
 
 #validation-input.valid {
@@ -19,3 +44,13 @@ max-width: 60%;
 #validation-input.invalid {
   border-color: #f44336;
 }
+#font-size-control  {
+  display: block;
+  margin-top: 70px;
+  margin-left: 70px;
+}
+#text {
+  display: block; 
+  margin-left: 70px; 
+}
+

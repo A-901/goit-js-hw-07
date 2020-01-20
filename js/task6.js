@@ -1,9 +1,11 @@
 'use strict';
 
 const validation = document.querySelector('#validation-input');
-const lengthInput = validation.getAttribute('data-length');
-const inputValidation = function() {
-  if (validation.value.length === Number(lengthInput)) {
+const lengthMassage = validation.getAttribute('data-length');
+
+
+const inputValidation = function () {
+  if (validation.value.length === Number(lengthMassage)) {
     validation.classList.add('valid');
     validation.classList.replace('invalid', 'valid');
   } else {
@@ -11,4 +13,10 @@ const inputValidation = function() {
     validation.classList.replace('valid', 'invalid');
   }
 };
+
 validation.addEventListener('blur', inputValidation);
+
+
+
+
+

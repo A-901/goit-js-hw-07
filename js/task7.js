@@ -1,9 +1,9 @@
 'use strict';
+const fontControlPanel = document.querySelector('#font-size-control');
+const text = document.querySelector('#text');
 
-const idText = document.querySelector('#text');
-const span = document.querySelector('#font-size-slider');
-idText.style.fontSize = `${span.value}px`;
-const fontSize = function () {
-  idText.style.fontSize = `${span.value}px`
+const changeFontSize = function () {
+  text.style.fontSize = `${fontControlPanel.value}px`; 
 };
-span.addEventListener('input', fontSize);
+
+fontControlPanel.addEventListener('input', changeFontSize);

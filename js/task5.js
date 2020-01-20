@@ -1,8 +1,11 @@
 'use strict';
 
-const input = document.querySelector('#name-input');
-const output = document.querySelector('#name-output');
-const addName = function(e) {
-  output.textContent = e.target.value ? e.target.value : 'незнакомец';
+const inputName = document.querySelector('#name-input');
+const outputName = document.querySelector('#name-output');
+
+
+const addN = function (arg) {  
+  outputName.textContent = arg.target.value ? arg.target.value : 'незнакомец';
 };
-input.addEventListener('input', addName);
+
+inputName.addEventListener('input', addN);
