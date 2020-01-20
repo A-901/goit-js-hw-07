@@ -1,4 +1,5 @@
-'use strict';
+'use strict'; 
+
 
 const inputForm = document.querySelector('#controls input');
 const renderBtn = document.querySelector('button[data-action="render"]');
@@ -10,17 +11,18 @@ function generateRandomColor() {
     return randomColor;    
 };
 
-const render = function createBoxes() {
+function createBoxes() {
   let amount = Number(inputForm.value);  
-  for (let i = 0; amount < i ; i + 1) {
-    renderBox.insertAdjacentHTML('beforeend', `<div style="width: ${30 + i * 10}px; height: ${30 + i * 10}px; background-color: ${generateRandomColor()};"></div>`, );
+  for (let i = 0; i < amount  ; i += 1) {
+    renderBox.insertAdjacentHTML('afterbegin', `<div style="width: ${30 + i * 10}px; height: ${30 + i * 10}px; background-color: ${generateRandomColor()};"></div>`, );
   }
 };
-
-const destroy = function destroyBox() {
-  renderBox.insertAdjacentHTML = '';
+renderBox.insertAdjacentHTML('afterbegin')
+function destroyBox() {
+  renderBox.innerHTML = '';
+  inputForm.value = 0;
 };
 
-renderBtn.addEventListener('click', render);
-destroyBtn.addEventListener('click', destroy);
+renderBtn.addEventListener('click', createBoxes);
+destroyBtn.addEventListener('click', destroyBox);
 
