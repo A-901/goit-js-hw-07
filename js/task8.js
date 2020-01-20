@@ -13,8 +13,8 @@ function generateRandomColor() {
 
 function createBoxes() {
   let amount = Number(inputForm.value);  
-  for (let i = 0; i < amount  ; i += 1) {
-    renderBox.insertAdjacentHTML('beforebegin', `<div style="width: ${30 + i * 10}px; height: ${30 + i * 10}px; background-color: ${generateRandomColor()};"></div>`, );
+  for (let i = 0; i < amount  ; i ++) {
+    renderBox.insertAdjacentHTML('afterbegin', `<div style="width: ${30 + i * 10}px; height: ${30 + i * 10}px; background-color: ${generateRandomColor()};"></div>` );
   }
 };
 
@@ -25,4 +25,5 @@ function destroyBox() {
 
 renderBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBox);
+
 
